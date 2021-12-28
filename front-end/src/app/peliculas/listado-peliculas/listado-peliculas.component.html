@@ -7,7 +7,7 @@
     <p>No hay peliculas para mostrar</p>
 </div>
 
-<div *ngIf="peliculas && peliculas.length > 0">
+<ng-container *ngIf="peliculas && peliculas.length > 0">
 
     <div *ngFor="let pelicula of peliculas; let index=index" class="pelicula-contenedor">
         <div>
@@ -21,4 +21,4 @@
             {{pelicula.precio | currency}}
         </div>
     </div>
-</div>
+</ng-container>
