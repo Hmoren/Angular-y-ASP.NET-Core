@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit {
   ngOnInit(): void {
     setTimeout(()=>{
-      this.peliculas = [{
+      this.peliculasEnCines = [{
         titulo: 'Spider-Man',
         fechaLanzamiento: new Date(),
         precio: 1400.99
@@ -23,7 +23,22 @@ export class AppComponent implements OnInit {
   }
   title = 'Al valor que yo quiera';
 
-  peliculas;
+  peliculasEnCines;
+  peliculasProximosEstrenos = [{
+    titulo: 'Avenge: Endgame',
+    fechaLanzamiento: new Date(),
+    precio: 1400.99
+  },
+  {
+    titulo: 'Inception',
+    fechaLanzamiento: new Date('2016-11-14'),
+    precio: 300.99
+  },
+  {
+    titulo: 'Rocky',
+    fechaLanzamiento: new Date('2016-11-14'),
+    precio: 300.99
+  }]
 
   duplicarNumero(valor: number): number {
     return valor * 2;
