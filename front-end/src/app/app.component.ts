@@ -18,27 +18,13 @@ export class AppComponent implements OnInit {
         fechaLanzamiento: new Date('2016-11-14'),
         precio: 300.99
       }]
-    },500)
+    },3000)
     
   }
   title = 'Al valor que yo quiera';
 
   peliculasEnCines;
-  peliculasProximosEstrenos = [{
-    titulo: 'Avenge: Endgame',
-    fechaLanzamiento: new Date(),
-    precio: 1400.99
-  },
-  {
-    titulo: 'Inception',
-    fechaLanzamiento: new Date('2016-11-14'),
-    precio: 300.99
-  },
-  {
-    titulo: 'Rocky',
-    fechaLanzamiento: new Date('2016-11-14'),
-    precio: 300.99
-  }]
+  peliculasProximosEstrenos = []
 
   duplicarNumero(valor: number): number {
     return valor * 2;
