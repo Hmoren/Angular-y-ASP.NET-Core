@@ -13,14 +13,25 @@
 
 <h2>Datos de la Peliculas</h2>
 
-<div *ngFor="let pelicula of peliculas; let index=index" class="pelicula-contenedor">
-    <div>
-        Pelicula {{index}}: {{pelicula.titulo}}
-    </div>
-    <div>
-        {{pelicula.fechaLanzamiento | date:"dd-MMMM-yyyy" | uppercase}}
-    </div>
-    <div>
-        {{pelicula.precio | currency}}
+<div *ngIf="!peliculas">
+    <img src="https://media2.giphy.com/media/3oEjI6SIIHBdRxXI40/200.gif" alt="">
+</div>
+
+<div *ngIf="peliculas?.length === 0">
+    <p>No hay peliculas para mostrar</p>
+</div>
+
+<div *ngIf="peliculas && peliculas.length > 0">
+
+    <div *ngFor="let pelicula of peliculas; let index=index" class="pelicula-contenedor">
+        <div>
+            Pelicula {{index}}: {{pelicula.titulo}}
+        </div>
+        <div>
+            {{pelicula.fechaLanzamiento | date:"dd-MMMM-yyyy" | uppercase}}
+        </div>
+        <div>
+            {{pelicula.precio | currency}}
+        </div>
     </div>
 </div>
