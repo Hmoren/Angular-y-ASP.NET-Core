@@ -10,7 +10,8 @@ export class AppComponent {
 
   pelicula = {
     titulo: 'Spider-Man',
-    fechaLanzamiento: new Date()
+    fechaLanzamiento: new Date(),
+    precio: 1400.99
   }
 
   duplicarNumero(valor: number): number {

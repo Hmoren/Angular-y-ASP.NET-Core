@@ -14,8 +14,11 @@
 <h2>Datos de la Pelicula</h2>
 
 <div>
-    {{pelicula.titulo}}
+    {{pelicula.titulo | lowercase}}
 </div>
 <div>
-    {{pelicula.fechaLanzamiento}}
+    {{pelicula.fechaLanzamiento | date:"dd-MMMM-yyyy" | uppercase}}
+</div>
+<div>
+    {{pelicula.precio | currency}}
 </div>
