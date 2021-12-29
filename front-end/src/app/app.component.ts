@@ -22,7 +22,7 @@ export class AppComponent implements OnInit {
     
   }
   title = 'Al valor que yo quiera';
-
+  ocultar = false;
   peliculasEnCines;
   peliculasProximosEstrenos = []
 
